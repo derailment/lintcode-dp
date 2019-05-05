@@ -1,4 +1,4 @@
-package lintcode
+package main
 
 /**
  * @param coins: a list of integer
