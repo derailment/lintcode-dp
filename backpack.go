@@ -1,9 +1,5 @@
 package main
 
-import (
-	"fmt"
-)
-
 /**
  * @param m: An integer m denotes the size of a backpack
  * @param A: Given n items with size A[i]
@@ -40,8 +36,4 @@ func maxWeight(f [][]bool) int {
 		}
 	}
 	return 0
-}
-
-func main() {
-	fmt.Println(backPack(1, []int{3, 4, 8, 5}))
 }
