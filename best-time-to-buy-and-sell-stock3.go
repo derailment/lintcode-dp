@@ -1,9 +1,5 @@
 package main
 
-import (
-	"fmt"
-)
-
 /**
  * @param prices: Given an integer array
  * @return: Maximum profit
@@ -33,10 +29,6 @@ func maxProfit3(prices []int) int {
 		}
 	}
 	return maxArr([]int{f[n][1], f[n][3], f[n][5]})
-}
-
-func main() {
-	fmt.Println(maxProfit3([]int{4, 4, 6, 1, 1, 4, 2, 5}))
 }
 
 func maxNum(a, b int) int {
