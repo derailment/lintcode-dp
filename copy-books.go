@@ -23,9 +23,9 @@ func copyBooks(pages []int, k int) int {
 			} else {
 				minCost := int(^uint(0) >> 1)
 				for i := 1; i <= j; i++ {
-					partition := max(f[i][p-1], costSum[j-1]-costSum[i-1])
-					if partition < minCost {
-						minCost = partition
+					partitionCost := max(f[i][p-1], costSum[j-1]-costSum[i-1])
+					if partitionCost < minCost {
+						minCost = partitionCost
 					}
 				}
 				f[j][p] = minCost
