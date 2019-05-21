@@ -1,9 +1,5 @@
 package main
 
-import (
-	"fmt"
-)
-
 /**
  * @param m: An integer m denotes the size of a backpack
  * @param A: Given n items with size A[i]
@@ -28,8 +24,4 @@ func backPackII(m int, A []int, V []int) int {
 		}
 	}
 	return maxArr(f[n])
-}
-
-func main() {
-	fmt.Println(backPackII(100, []int{77, 22, 29, 50, 99}, []int{92, 22, 87, 46, 90}))
 }
