@@ -20,22 +20,15 @@ func maxProfit3(prices []int) int {
 					f[i][j] = f[i-1][j]
 				}
 				if j == 3 || j == 5 {
-					f[i][j] = maxNum(f[i-1][j], f[i-1][j-1]+profit)
+					f[i][j] = max(f[i-1][j], f[i-1][j-1]+profit)
 				}
 				if j == 2 || j == 4 {
-					f[i][j] = maxNum(f[i-1][j]+profit, f[i-1][j-1])
+					f[i][j] = max(f[i-1][j]+profit, f[i-1][j-1])
 				}
 			}
 		}
 	}
 	return maxArr([]int{f[n][1], f[n][3], f[n][5]})
-}
-
-func maxNum(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
 }
 
 func maxArr(s []int) int {

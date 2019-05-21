@@ -1,9 +1,5 @@
 package main
 
-import (
-	"fmt"
-)
-
 /**
  * @param K: An integer
  * @param prices: An integer array
@@ -36,9 +32,9 @@ func maxProfit4(K int, prices []int) int {
 				if j == 1 {
 					f[i][j] = f[i-1][j]
 				} else if j%2 == 1 {
-					f[i][j] = maxN(f[i-1][j], f[i-1][j-1]+profit)
+					f[i][j] = max(f[i-1][j], f[i-1][j-1]+profit)
 				} else {
-					f[i][j] = maxN(f[i-1][j]+profit, f[i-1][j-1])
+					f[i][j] = max(f[i-1][j]+profit, f[i-1][j-1])
 				}
 			}
 		}
@@ -47,26 +43,5 @@ func maxProfit4(K int, prices []int) int {
 	for i := 0; i <= K; i++ {
 		s[i] = f[n][2*K+1]
 	}
-	return maxA(s)
-}
-
-func maxN(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-
-func maxA(s []int) int {
-	max := 0
-	for i := 0; i < len(s); i++ {
-		if s[i] > max {
-			max = s[i]
-		}
-	}
-	return max
-}
-
-func main() {
-	fmt.Println(maxProfit(2, []int{4, 4, 6, 1, 1, 4, 2, 5}))
+	return maxArr(s)
 }
