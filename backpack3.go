@@ -1,9 +1,5 @@
 package main
 
-import (
-	"fmt"
-)
-
 /**
  * @param A: an integer array
  * @param V: an integer array
@@ -28,8 +24,4 @@ func backPackIII(A []int, V []int, m int) int {
 		}
 	}
 	return maxArr(f[n])
-}
-
-func main() {
-	fmt.Println(backPackIII([]int{2, 3, 5, 7}, []int{1, 5, 2, 4}, 10))
 }
