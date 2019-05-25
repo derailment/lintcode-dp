@@ -1,9 +1,5 @@
 package main
 
-import (
-	"fmt"
-)
-
 /**
  * @param A: An integer array
  * @param k: A positive integer (k <= length(A))
@@ -35,8 +31,4 @@ func kSum(A []int, k int, target int) int {
 		}
 	}
 	return f[n][k][target]
-}
-
-func main() {
-	fmt.Println(kSum([]int{1, 2, 3, 4, 5}, 3, 6))
 }
