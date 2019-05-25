@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"math"
 	"strconv"
 )
@@ -56,8 +55,4 @@ func twoDigitWays(s string) int {
 		return 1
 	}
 	return 0
-}
-
-func main() {
-	fmt.Println(numDecodings2("**********1111111111"))
 }
