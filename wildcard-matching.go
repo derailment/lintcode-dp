@@ -1,13 +1,5 @@
 package main
 
-import (
-	"fmt"
-)
-
-func main() {
-	fmt.Println(isMatch2("aa", "aa"))
-}
-
 /**
  * @param s: A string
  * @param p: A string includes "?" and "*"
